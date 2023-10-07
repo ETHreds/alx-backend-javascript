@@ -1,4 +1,3 @@
-ii
 module.exports = {
   env: {
     browser: false,
