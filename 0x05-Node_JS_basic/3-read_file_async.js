@@ -34,7 +34,7 @@ function countStudents(path) {
           console.log(`Number of students in ${field}: ${fieldCounts[field].length}. List: ${fieldCounts[field].join(', ')}`);
         });
 
-        resolve(); // Resolve the Promise once processing is complete
+        resolve({ students, fieldCounts });
       })
       .catch((error) => {
         // Reject the Promise if there's an error
