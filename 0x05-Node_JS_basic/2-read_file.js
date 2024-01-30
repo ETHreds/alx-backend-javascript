@@ -39,5 +39,4 @@ function countStudents(path) {
   }
 }
 
-// Example usage:
-countStudents('database.csv');
+module.exports = countStudents;
