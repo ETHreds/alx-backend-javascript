@@ -1,4 +1,7 @@
 /node_modules
 
 
-./main.js
+/main.js
+
+
+/full_server/node_modules
