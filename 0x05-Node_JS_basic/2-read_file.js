@@ -29,7 +29,7 @@ function countStudents(path) {
     });
 
     // Log the number of students in each field and their first names
-    console.log('Number of students:', students.length);
+    console.log(`Number of students: ${students.length}`);
     Object.keys(fieldCounts).forEach((field) => {
       console.log(`Number of students in ${field}: ${fieldCounts[field].length}. List: ${fieldCounts[field].join(', ')}`);
     });
