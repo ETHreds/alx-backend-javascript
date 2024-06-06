@@ -1,9 +1,7 @@
-/* eslint-disable */
+/* eslint-disable no-console */
 export default function handleResponseFromAPI(promise) {
-  promise = promise.then((response) => ({ status: 200, body: 'success' }));
-  promise = promise.catch((error) => new Error());
-  promise = promise.finally(() => {
-    console.log('Got a response from the API');
-  });
-  return promise;
+  return promise
+    .then(() => ({ status: 200, body: 'success' }))
+    .catch(() => Error())
+    .finally(() => { console.log('Got a response from the API'); });
 }
