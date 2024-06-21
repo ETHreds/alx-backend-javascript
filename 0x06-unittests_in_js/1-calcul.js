@@ -1,19 +1,20 @@
 function calculateNumber(type, a, b) {
-    const rounded_a = Math.round(a);
-    const rounded_b = Math.round(b);
-    
-    if (type === 'SUM') {
-      return rounded_a + rounded_b;
+    const roundA = Math.round(a)
+    const roundB = Math.round(b)
+
+    switch (type) {
+        case 'SUM':
+            return roundA + roundB;
+        case 'SUBTRACT':
+            return roundA - roundB;
+        case 'DIVIDE':
+            if (roundB === 0) {
+                return 'Error';
+            }
+            return roundA / roundB;
+        default:
+            throw new Error(`Unsupported operation type: ${type}`);
     }
-    if (type === 'SUBTRACT') {
-      return rounded_a - rounded_b;
-    }
-    if (type === 'DIVIDE') {
-      if (rounded_b === 0) {
-        return 'Error';
-      }
-      return rounded_a / rounded_b;
-    }
-  }
-  
-  module.exports = calculateNumber;
+}
+
+module.exports = calculateNumber;
